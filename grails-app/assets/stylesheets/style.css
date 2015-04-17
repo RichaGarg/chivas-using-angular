@@ -1,0 +1,333 @@
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn, em, img, ins, kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,time, mark, audio, video {margin:0; padding:0; border:0; outline:0; font-size:100%;  vertical-align:baseline; background:transparent; list-style: none;}
+textarea {resize:none;-webkit-appearance: none; border-radius: 0;outline:none;}
+body {line-height:1;-webkit-text-size-adjust:none;  }
+body{-webkit-text-size-adjust: none;}
+.webkit-app{-webkit-appearance: none;}
+#submitcodeModal img.loading {
+    height: 25px!important;
+    margin-top: 1%;
+}
+.share-fb img.loading {
+    height: 25px!important;
+    margin-top: 7%;
+}
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+* {outline:none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;}
+nav ul {list-style:none;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,q:before, q:after { content:''; content:none;}
+a {margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none;outline:none;}
+a:hover{text-decoration:none;}
+ins {background-color:#ff9;color:#000; text-decoration:none;}
+mark {background-color:#ff9;color:#000; font-style:italic;font-weight:bold;}
+del {text-decoration: line-through;}
+abbr[title], dfn[title] {border-bottom:1px dotted; cursor:help;}
+table {border-collapse:collapse; border-spacing:0;}
+ul, li { list-style:none;}
+hr {display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0;}
+input, select {vertical-align:middle;outline:none;}
+input[type="text"], input[type="password"], input[type="submit"], input[type="tel"]{-webkit-appearance:none; border-radius:0;}
+img{max-width:100%;height:auto;vertical-align:top;}
+body{background:#fff;font:14px;color:#fff; min-height:100%; max-height:100%;}
+html{ min-height:100%; max-height:100%;}
+.flR{float: right !important}
+.flL{float: left}
+.alR{text-align: right}
+.alC{text-align: center}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+@font-face {
+    font-family: 'ChivasPrioriBold';
+    src: url('../fonts/ChivasPrioriBold.eot?#iefix') format('embedded-opentype'),  url('../fonts/ChivasPrioriBold.otf')  format('opentype'),
+    url('../fonts/ChivasPrioriBold.woff') format('woff'), url('../fonts/ChivasPrioriBold.ttf')  format('truetype'), url('../fonts/ChivasPrioriBlack.svg#ChivasPrioriBlack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'ChivasPrioriBlack';
+    src: url('../fonts/ChivasPrioriBlack.eot?#iefix') format('embedded-opentype'),  url('../fonts/ChivasPrioriBlack.otf')  format('opentype'),
+    url('../fonts/ChivasPrioriBlack.woff') format('woff'), url('../fonts/ChivasPrioriBlack.ttf')  format('truetype'), url('../fonts/ChivasPrioriBlack.svg#ChivasPrioriBlack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ChivasPrioriLight';
+    src: url('../fonts/ChivasPrioriLight.eot?#iefix') format('embedded-opentype'),  url('../fonts/ChivasPrioriLight.otf')  format('opentype'),
+    url('../fonts/ChivasPrioriLight.woff') format('woff'), url('../fonts/ChivasPrioriLight.ttf')  format('truetype'), url('../fonts/ChivasPrioriLight.svg#ChivasPrioriLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChivasPrioriRegular';
+    src: url('../fonts/ChivasPrioriRegular.eot?#iefix') format('embedded-opentype'),  url('../fonts/ChivasPrioriRegular.otf')  format('opentype'),
+    url('../fonts/ChivasPrioriRegular.woff') format('woff'), url('../fonts/ChivasPrioriRegular.ttf')  format('truetype'), url('../fonts/ChivasPrioriRegular.svg#ChivasPrioriRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+    height: 100%;
+}
+
+.container{ width:100%; margin:0 auto; position:relative;height: 100%;padding: 0%!important;}
+.popup .close{ z-index: 9999!important; background:url(../images/spritesheet.png) -133px 0 no-repeat; height:27px; width:27px; position:absolute; right:0; top:0; cursor:pointer; }
+.form li{ margin-bottom:20px;}
+.form .label{ margin-right:15px; float:left; display:table; height:36px; vertical-align:middle;}
+.form label{ text-align:right; display:table-cell; font-family: 'ChivasPrioriBlack'; vertical-align:middle;  width:120px;  font-size:16px; color:#fff; height:36px; text-transform:uppercase;}
+.form input.textbox{ background:#230569; border:2px solid #00a1e7; padding:4px; line-height:24px; height:36px; font-size:24px; font-family: 'ChivasPrioriLight'; color:#fff; width:332px;   float: right;}
+.form input[type="submit"]{ display:inline-block; height:40px; width:222px; background:#a08c64; line-height:44px; text-align:center; color:#fff; font-size:26px; font-family: 'ChivasPrioriBold'; border:0; cursor:pointer; }
+.form .error{ font-size: 14px; color:red;  font-family: 'ChivasPrioriBold'; display: inline-block; line-height:18px;  }
+.down-arrow{ width:117px; height:40px; display:inline-block; position:absolute; background:url(../images/spritesheet.png) 0 0 no-repeat; left:0; right: 0; margin: 0 auto; bottom:10px; z-index:99;}
+.up-arrow{ width:117px; height:40px; display:inline-block; position:absolute; background:url(../images/spritesheet.png) -182px -177px no-repeat; left:0; right: 0; margin: 0 auto; top:10px; z-index:99;}
+
+
+.common-btn{ cursor: pointer; border: 0; display:inline-block; height:56px; width:170px; background:#a08c64; line-height:56px; text-align:center; color:#fff; font-size:37px; font-family: 'ChivasPrioriBold'!important; }
+
+/*------- section 1 ---- */
+.section-1, .outlet-section{height: 100%;  background:#230569 url(../images/section1-bg.jpg) center 0 no-repeat; background-size:100% 100%; text-align: center;}
+.section-1 .bottle, .outlet-section .bottle{ vertical-align: bottom;}
+.section-1 p, .outlet-section p{font-family: 'ChivasPrioriBold'; color:#fff; font-size:20px; line-height:24px; text-align:right; letter-spacing:1px; text-transform:uppercase;}
+.section-1 .col, .outlet-section .col{ width:350px; position:absolute; bottom:206px; left:0;margin-left: 10%}
+.section-1 .col-right, .outlet-section .col-right{ width:350px; position:absolute; bottom:115px; right:0; text-align: left;margin-right: 10%}
+.section-1 .col-right p, .outlet-section .col-right p{ text-align:left;}
+.section-1 .center-col, .outlet-section .center-col{ width: 332px; display: table; vertical-align: bottom; height: 98%; margin:0 auto; }
+.section-1 .center-col .inner, .outlet-section .center-col .inner{ display: table-cell; height: 100%; vertical-align: bottom;}
+.section-1 .center-col img, .outlet-section .center-col img{ vertical-align: bottom; max-width: 84%; width: auto}
+.section-1 .outlet-col-right, .outlet-section .outlet-col-right{ width:350px; position:absolute; top:100px; right:0;}
+
+.modal-content {
+    background-color: #2828aa;
+}
+.modal-body {text-align: center}
+.br-fullpage-nav {display: none}
+.age-popup{text-transform:uppercase; padding:60px 40px !important;}
+.age-popup .text{ display:inline-block; color:#fff; font-size:46px; font-family: 'ChivasPrioriBold'; line-height:50px; margin-bottom:10px;}
+.age-popup .common-btn{ line-height: 64px;text-transform:uppercase; }
+.clear{ clear:both;}
+.main{ height: 100%;width: 100%}
+
+
+.section-2{  height: 100%;background:#230569 url(../images/section2-bg.png) 0 0 no-repeat; background-size:100% 100%;  text-align:center;}
+.section-2 .container{  height:100%; min-height:100%; }
+.section-2 .image-container{ height:500px;   width:500px; float:left; background:#302ea4; border-radius:50%; -moz-border-radius:50%; -webkit-border-radius:50%; padding:20px; margin-top:7%;margin-left: 6%;}
+.section-2 .image-container img{ height:100%; width:100%; -moz-border-radius:50%; -webkit-border-radius:50%; }
+.section-2 .win-msg{ float:right; margin-top:12%;margin-right:10%;font-family: 'ChivasPrioriLight'; width:384px; text-align:center; font-size:59px; color:#fff; text-transform:uppercase; line-height:50px;}
+.section-2 .win-msg strong{font-family: 'ChivasPrioriBold'; font-size:103px; color:#a08c64; line-height:65px; display: block;}
+.section-2 .win-msg span{font-size:85px; color:#a08c64; line-height:50px;}
+.section-2 .button{float:right; margin-top:3px;  width:384px; text-align:center;margin-right: 10%;}
+.section-2 .button .common-btn{ width:auto; padding:0 15px; text-transform:uppercase; font-size:24px; height:48px; line-height:48px; font-family: 'ChivasPrioriBold'; }
+.section-2 .checkout{ color:#a08c64; font-size:24px; line-height:28px; display:inline-block; position:absolute; width: 180px; bottom:62px; left:0; right: 0; margin: 0 auto; font-family: 'ChivasPrioriBold'; }
+.register-popup{ background:#2828aa !important; padding:30px !important; }
+.register-popup .text{ display:inline-block; color:#fff; font-size:27px; font-family: 'ChivasPrioriRegular'; line-height:50px; margin-bottom:30px;}
+.register-popup span{font-family: 'ChivasPrioriRegular'; }
+.register-popup p{font-family: 'ChivasPrioriRegular'; }
+.register-popup p a{ color:#fff;font-family: 'ChivasPrioriBlack';   }
+.register-popup span .tc{font-family: 'ChivasPrioriRegular'; }
+.register-popup span a{ color:#fff;font-family: 'ChivasPrioriBlack';   }
+
+.register-popup .form label{text-align: left}
+.register-popup span.text{text-align: left !important;margin-left: -10%;}
+
+.privacy-policy-popup{ background:#230569 !important;padding:30px !important;}
+.privacy-policy-popup p{ color:#fff; font-size:16px;  font-family: 'ChivasPrioriRegular';  letter-spacing:1.5px; line-height:18px; margin-bottom:10px;text-align: justify}
+.privacy-policy-popup .text{ display:block; color:#fff; font-size:27px; font-family: 'ChivasPrioriBlack';line-height:30px; margin-bottom:20px; text-transform: uppercase;text-align: justify}
+.privacy-policy-popup strong{ display:block;color:#fff; font-size:17px;  font-family: 'ChivasPrioriRegular';  letter-spacing:1.5px; line-height:18px; margin-bottom:10px;text-align: justify}
+
+
+
+.section-3{height: 100%;background:#2d80c5 url(../images/section3-bg.jpg) center 0 no-repeat; background-size:100% 100%;  text-align:center;}
+#page3 .container{ padding:160px 0 0px 0; text-align:center;}
+#page3 .section-3 p{ color:#fff; font-size:24px;  font-family: 'ChivasPrioriBold'; text-transform:uppercase; letter-spacing:1.5px; width:850px; margin:0 auto; line-height:30px;padding-top: 8%}
+#page3 .common-btn{ text-transform:uppercase; width:235px; margin-top:20px; height:50px; font-size:29px;}
+
+.details-popup{ background:#230569 !important; width:630px !important; text-align:left; padding:50px 40px 40px 40px !important; color:#fff; }
+.details-popup p{ color:#fff; font-size:21px;  font-family: 'ChivasPrioriRegular';  letter-spacing:1.5px; line-height:30px; margin-bottom:30px;}
+.details-popup p strong{font-family: 'ChivasPrioriBold'; font-weight:normal; }
+.details-popup p span{font-family: 'ChivasPrioriBold'; text-transform:uppercase;}
+
+
+
+
+
+#page4{height: 100%;background:#230569 url(../images/section2-bg.png) 0 0 no-repeat; background-size:100% 100%;  text-align:center;}
+#page4 .container{  height:100%; min-height:100%; padding-top: 60px; }
+#page4 .section-4 p{ color:#fff; font-size:30px; padding-top: 50px; font-family: 'ChivasPrioriBold';  margin:0 auto; line-height:28px;}
+#page4 .section-4 .common-btn{ text-transform:uppercase; width:235px; height:50px; font-size:29px; position: absolute; z-index: 999; bottom: 85px!important; left:0; right: 0; margin:0 auto;}
+
+.island-popup{ background:#230569 !important;  color:#fff;width:720px !important;  padding: 0 !important; }
+.island-popup img{ float: left;  width: 330px; margin-right: 20px;margin-left: 1%}
+.island-popup h1{ color:#fff; font-size:35px; font-weight: normal; text-transform: uppercase; margin:15px 0; font-family: 'ChivasPrioriBold'; width: 100%; text-align: justify; }
+.island-popup p{ font-family: 'ChivasPrioriRegular'; font-size:18px; line-height: 20px; margin:0 0 15px 15px;  padding-right: 2%;text-align: justify}
+.island-popup p a{ color:#fff; font-family: 'ChivasPrioriBold';  text-decoration: underline; }
+.island-popup .title{ font-family: 'ChivasPrioriBold'; font-size:18px; display: block; line-height: 20px; text-transform: uppercase;}
+.island-popup ul{  margin:0 15px 15px 15px;}
+.island-popup ul li{ font-size: 18px; line-height: 20px; font-family: 'ChivasPrioriRegular'; text-align: justify;}
+.island-popup  .close{ margin-right:-1px;}
+.island-popup span.title {
+    text-align: justify;
+}
+.controls {
+    position: absolute;
+    top: 350px;
+    left: 0%;
+    width: 100%;
+    z-index: 99;
+}
+
+.controls a {
+    display: block;
+    height: 110px;
+    width: 75px;
+    background-image:url(../images/spritesheet.png) ;
+    background-repeat: no-repeat;
+}
+.controls .previous {
+    float: left;
+    background-position: -320px 0;
+    margin-left:55px;
+}
+.controls .next {
+    float: right;
+    background-position: -224px 0;
+    margin-right: 55px;
+}
+
+#wrapper_bu {
+    position: absolute;
+    top: 130px!important;
+    width: 100%;
+    height: 80%;
+}
+#wrapper_bu img{ width: 35%;}
+.txt_Center { margin: 50% 0% 0% 20% }
+.txt_h1 { font-size: 2em }
+.holder_bu { cursor: pointer }
+[class*=holder_bu_away] {
+    display: none;
+}
+.holder_bu_awayL1 {
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    width: 30%;
+    height: 70%;
+    z-index: 9;
+    -webkit-transition: width 1s, height 1s, top 1s, left 1s, z-index 0.5s;
+    -moz-transition: width 1s, height 1s, top 1s, left 1s, z-index 0.5s;
+    -o-transition: width 1s, height 1s, top 1s, left 1s, z-index 0.5s;
+    -ms-transition: width 1s, height 1s, top 1s, left 1s, z-index 0.5s;
+    transition: width 1s, height 1s, top 1s, left 1s, z-index 0.5s;
+}
+.holder_bu_center {
+    position: absolute;
+    top: 5%;
+    left: 17%;
+    width: 65%;
+    height: 100%;
+    z-index: 99;
+    -webkit-transition: width 1s, height 1s, top 1s, left 1s, z-index 0.5s;
+    -moz-transition: width 1s, height 1s, top 1s, left 1s, z-index 0.5s;
+    -o-transition: width 1s, height 1s, top 1s, left 1s, z-index 0.5s;
+    -ms-transition: width 1s, height 1s, top 1s, left 1s, z-index 0.5s;
+    transition: width 1s, height 1s, top 1s, left 1s, z-index 0.5s;
+}
+.holder_bu_awayR1 {
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 70%;
+    width: 30%;
+    height: 70%;
+    z-index: 9;
+    -webkit-transition: width 1s, height 1s, top 1s, left 1s, z-index 0.5s;
+    -moz-transition: width 1s, height 1s, top 1s, left 1s, z-index 0.5s;
+    -o-transition: width 1s, height 1s, top 1s, left 1s, z-index 0.5s;
+    -ms-transition: width 1s, height 1s, top 1s, left 1s, z-index 0.5s;
+    transition: width 1s, height 1s, top 1s, left 1s, z-index 0.5s;
+}
+
+#page5{height: 100%;width: 100%;background:#8ad6f6 url(../images/section5-bg.jpg) center center no-repeat!important;  text-align:left;}
+#page5 .container{  height:100%; min-height:100%;  }
+#page5 .container .right-col{ width:49%;float: right;padding-top: 17%;}
+.section-5 p{ font-family: 'ChivasPrioriRegular';  font-size: 16px; line-height: 18px; margin-bottom: 20px; letter-spacing: .8px;   margin-right: 21%;  text-align: justify;}
+.section-5 .highlighted{ letter-spacing: 1px; font-family: 'ChivasPrioriBold'; font-size: 16px; line-height: 22px; margin-bottom: 20px; text-transform: uppercase;   margin-right: 21%;}
+.section-5 .title{ font-family: 'ChivasPrioriBlack'; font-size: 27px; display: block; line-height: 30px; text-transform: uppercase;}
+.section-5 .common-btn{ text-transform:uppercase; width:185px; height:40px; font-size:22px; line-height: 40px; margin-bottom: 20px;}
+.section-5 p a{ color:#fff;text-decoration: underline; }
+
+/*.video-popup{ text-align: center; background:url("../images/video-popup-bg.png") 0 0 repeat !important; text-align:left;z-index:9; padding: 0 !important; width:730px !important; height:80% !important; min-height: 400px !important;}*/
+/*.video-popup .play-btn{ height: 172px; width: 172px; position: absolute; left:0; right: 0; margin: 0 auto; z-index: 99; top:30%; background: url("../images/spritesheet.png") 0 -124px no-repeat; }*/
+/*.video-popup .video{ text-align: center; opacity: 0.9; }*/
+.video-popup  .close{ margin-right:-1px;}
+.establishment-details strong{ display: block; margin-bottom: 15px; text-transform: uppercase;  font-family: 'ChivasPrioriBold';text-align: justify;margin-left: 2%;}
+.establishment-details li{ color:#fff; font-size:15px;  font-family: 'ChivasPrioriRegular';  letter-spacing:1.5px; line-height:18px;text-align: justify;margin-left: 2%;}
+
+.video-popup iframe{
+    width: 100%;
+    height: 345px;
+}
+.modal-body {
+    padding: 0%;
+    margin: 0%;
+}
+
+#slides_control div{
+    height: 265px;
+}
+#slides_control img{
+    margin:auto;
+    align-self: center;
+    width: 400px;
+}
+#slides_control {
+    position:absolute;
+    width: 400px;
+    margin-left:33%;
+}
+.carousel-inner {
+    margin-top: 10%;
+}
+
+input.textbox.ng-dirty.ng-invalid, input.textbox.ng-touched.ng-invalid {
+    border: 2px solid #ff0000;
+}
+input[type="checkbox"].ng-touched.ng-invalid, input[type="checkbox"].ng-dirty.ng-invalid {
+    outline: #ff0000 solid thin;
+}
+
+span.errorMsg {
+    color: red;
+    display: inherit;
+    text-align: left;
+    margin-left: 38%;
+}
+img.loading {
+    height: 25px!important;
+    margin-top: -20%;
+}
+
