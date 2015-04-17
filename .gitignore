@@ -1,0 +1,9 @@
+*.iml
+.idea/*
+target/*
+.classpath
+.project
+grailsw
+grailsw.bat
+WEB-INF/*
+test/*
