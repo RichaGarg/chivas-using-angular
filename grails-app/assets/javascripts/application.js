@@ -8,6 +8,7 @@
 //= require br-fullpage.js
 //= require ui-bootstrap-tpls-0.10.0.js
 //= require ui-bootstrap-0.12.1.js
+//= require user/fbshare.js
 //= require user/bootstrapModal.js
 //= require user/section1Angular.js
 //= require user/section2Angular.js
