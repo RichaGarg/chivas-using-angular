@@ -19,22 +19,24 @@ class CouponService {
     def sessionFactory
 
     def couponRegistration(CouponSubmitCO couponSubmitCO) {
+        println('inside coupon service method')
         RegisterCoupon registerCoupon = registerCouponCode(couponSubmitCO)
         String msg = ""
         String smsMsg = ""
-        if (registerCoupon.coupon?.prize) {
+        if (registerCoupon?.coupon?.prize) {
             Prize prize = registerCoupon.coupon.prize
             Object[] args1 = [prize.productName] as Object[]
             msg = getMessage("couponSubmit.success.prize.won", args1)
-            Object[] args2 = ["\"${registerCoupon.coupon.couponCode}\"", prize.productName] as Object[]
-            smsMsg = getMessage("couponSubmit.success.prize.won.message", args2)
+//            Object[] args2 = ["\"${registerCoupon.coupon.couponCode}\"", prize.productName] as Object[]
+//            smsMsg = getMessage("couponSubmit.success.prize.won.message", args2)
         } else {
             msg = getMessage("couponSubmit.success.register", null)
-            Object[] args = [registerCoupon.coupon.couponCode] as Object[]
-            smsMsg = getMessage("couponSubmit.success.register.message", args)
+//            Object[] args = [registerCoupon.coupon.couponCode] as Object[]
+//            smsMsg = getMessage("couponSubmit.success.register.message", args)
         }
         cleanUpGorm()
-        return [msg: msg, smsMsg: smsMsg, registerCouponId: registerCoupon.id]
+//        return [msg: msg, smsMsg: smsMsg, registerCouponId: registerCoupon.id]
+        return [msg: msg, registerCouponId: registerCoupon.id]
     }
 
     RegisterCoupon registerCouponCode(CouponSubmitCO couponSubmitCO) {

@@ -14,8 +14,6 @@ class CouponSubmitCO {
     String nric
     String phoneNumber
     String email
-    //TODO: FIXIT
-//    boolean isSharedOnFb = true
 
     static constraints = {
         uniqueCode nullable: false, blank: false, validator: { val, obj ->
