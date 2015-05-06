@@ -1,4 +1,4 @@
-<div class="share-fb">
+<div class="share-fb" ng-hide="showDiv.fbShare">
     <span class="title">
         double your chances:
     </span>
@@ -9,7 +9,7 @@
     <a href="javascript:void(0)" ng-click="shareOnFacebook('http://www.example.com')">
         <img src="${asset.assetPath(src: 'fb-btn.png')}" alt="Share On Facebook">
     </a>
-    <span class="spinner" id="fbShareSpinner" style="display: none">
+    <span class="spinner" ng-show="showDiv.fbSpinner">
         <img class="loading" src="${asset.assetPath(src: 'spinner.gif')}" alt="Processing.."/>
     </span>
 </div>

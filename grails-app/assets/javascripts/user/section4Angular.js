@@ -12,33 +12,34 @@ islandDetailApp.controller('IslandDetailsCtrl', ['$scope', '$modal', '$http', fu
     $scope.showIslandDetailsPopUp = function () {
         $scope.open();
     }
+    var serverUrl = 'http://www.example.com'
     $scope.slides = [
         {
-            image: 'http://localhost:8080/assets/image1.jpg'
+            image: serverUrl + '/assets/image1.jpg'
         },
         {
-            image: 'http://localhost:8080/assets/image2.jpg'
+            image: serverUrl + '/assets/image2.jpg'
         },
         {
-            image: 'http://localhost:8080/assets/image3.jpg'
+            image: serverUrl + '/assets/image3.jpg'
         },
         {
-            image: 'http://localhost:8080/assets/image4.jpg'
+            image: serverUrl + '/assets/image4.jpg'
         },
         {
-            image: 'http://localhost:8080/assets/image5.jpg'
+            image: serverUrl + '/assets/image5.jpg'
         },
         {
-            image: 'http://localhost:8080/assets/image6.jpg'
+            image: serverUrl + '/assets/image6.jpg'
         },
         {
-            image: 'http://localhost:8080/assets/image7.jpg'
+            image: serverUrl + '/assets/image7.jpg'
         },
         {
-            image: 'http://localhost:8080/assets/image8.jpg'
+            image: serverUrl + '/assets/image8.jpg'
         },
         {
-            image: 'http://localhost:8080/assets/image9.jpg'
+            image: serverUrl + '/assets/image9.jpg'
         }
     ];
 }]);

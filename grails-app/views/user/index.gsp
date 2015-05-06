@@ -59,7 +59,7 @@
 <script>
     window.fbAsyncInit = function () {
         FB.init({
-            appId: "${grailsApplication.config.facebook.appId}",
+            appId: "${grailsApplication.config.web.facebook.appId}",
             xfbml: true,
             version: 'v2.1'
         });

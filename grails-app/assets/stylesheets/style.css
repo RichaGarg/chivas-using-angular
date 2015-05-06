@@ -159,7 +159,7 @@ html, body {
 
 .cong-msg-popup{ background:#2828aa !important; width:480px !important; position:absolute; text-align:center; right:0; left:0; margin: 0 auto;  z-index:9; padding-top:60px;}
 .cong-msg-popup .title{ text-transform:uppercase; display:block; font-family: 'ChivasPrioriBlack'; color:#fff; font-size:40px;  text-align:center; line-height:50px;}
-.cong-msg-popup .text{ display:inline-block; color:#fff; font-size:22px; font-family: 'ChivasPrioriRegular'; line-height:24px; margin-bottom:25px;}
+.cong-msg-popup .text{ display:inline-block; color:#fff; font-size:22px; font-family: 'ChivasPrioriRegular'; line-height:24px; margin-bottom:25px;padding: 10px}
 .share-fb{ background:#230569; padding:40px;}
 .share-fb .title{ font-size:30px; line-height:30px;}
 .share-fb .text{ font-size:25px; line-height:25px;}

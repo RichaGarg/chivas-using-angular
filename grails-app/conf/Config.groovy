@@ -16,19 +16,19 @@ grails.project.groupId = ChivasAngular // change this to alter the default packa
 // The ACCEPT header will not be used for content negotiation for user agents containing the following strings (defaults to the 4 major rendering engines)
 grails.mime.disable.accept.header.userAgents = ['Gecko', 'WebKit', 'Presto', 'Trident']
 grails.mime.types = [ // the first one is the default format
-    all:           '*/*', // 'all' maps to '*' or the first available format in withFormat
-    atom:          'application/atom+xml',
-    css:           'text/css',
-    csv:           'text/csv',
-    form:          'application/x-www-form-urlencoded',
-    html:          ['text/html','application/xhtml+xml'],
-    js:            'text/javascript',
-    json:          ['application/json', 'text/json'],
-    multipartForm: 'multipart/form-data',
-    rss:           'application/rss+xml',
-    text:          'text/plain',
-    hal:           ['application/hal+json','application/hal+xml'],
-    xml:           ['text/xml', 'application/xml']
+                      all          : '*/*', // 'all' maps to '*' or the first available format in withFormat
+                      atom         : 'application/atom+xml',
+                      css          : 'text/css',
+                      csv          : 'text/csv',
+                      form         : 'application/x-www-form-urlencoded',
+                      html         : ['text/html', 'application/xhtml+xml'],
+                      js           : 'text/javascript',
+                      json         : ['application/json', 'text/json'],
+                      multipartForm: 'multipart/form-data',
+                      rss          : 'application/rss+xml',
+                      text         : 'text/plain',
+                      hal          : ['application/hal+json', 'application/hal+xml'],
+                      xml          : ['text/xml', 'application/xml']
 ]
 
 // URL Mapping Cache Max Size, defaults to 5000
@@ -71,7 +71,7 @@ grails.enable.native2ascii = true
 // packages to include in Spring bean scanning
 grails.spring.bean.packages = []
 // whether to disable processing of multi part requests
-grails.web.disable.multipart=false
+grails.web.disable.multipart = false
 
 // request parameters to mask when logging exceptions
 grails.exceptionresolver.params.exclude = ['password']
@@ -102,71 +102,82 @@ environments {
                          "mail.smtp.socketFactory.fallback": "false"]
             }
         }
-        facebook {
-            appId = '655971917858143'
-        }
-    }
-    qa {
-        grails.serverURL = "http://ts-chivas.qa3.intelligrape.net"
-        grails.logging.jul.usebridge = false
-        grails.plugin.console.enabled = true
-        grails.dbconsole.enabled = true
-        facebook.appId = "1557174327899853"
-        grails {
-            mail {
-                host = "smtp.gmail.com"
-                port = 465
-                username = "chivas.staging@gmail.com"
-                password = "igdefault"
-                props = ["mail.smtp.auth"                  : "true",
-                         "mail.smtp.socketFactory.port"    : "465",
-                         "mail.smtp.socketFactory.class"   : "javax.net.ssl.SSLSocketFactory",
-                         "mail.smtp.socketFactory.fallback": "false"]
+        web {
+            facebook {
+                appId = '655971917858143'
+                secretKey = "bc9136ca33328fdc5a67d7a7da3d1faf"
+                baseUrl = 'https://graph.facebook.com/v2.3/'
+                uri {
+                    api = "https://graph.facebook.com/me"
+                    graph = "https://graph.facebook.com/"
+                    auth = "https://www.facebook.com/v2.3/dialog/oauth"
+                    callback = "/facebook/callback"
+                }
+                scope = "email,publish_actions,read_stream"
             }
         }
+    }
+}
+qa {
+    grails.serverURL = "http://ts-chivas.qa3.intelligrape.net"
+    grails.logging.jul.usebridge = false
+    grails.plugin.console.enabled = true
+    grails.dbconsole.enabled = true
+    facebook.appId = "1557174327899853"
+    grails {
+        mail {
+            host = "smtp.gmail.com"
+            port = 465
+            username = "chivas.staging@gmail.com"
+            password = "igdefault"
+            props = ["mail.smtp.auth"                  : "true",
+                     "mail.smtp.socketFactory.port"    : "465",
+                     "mail.smtp.socketFactory.class"   : "javax.net.ssl.SSLSocketFactory",
+                     "mail.smtp.socketFactory.fallback": "false"]
+        }
+    }
 
-        grails.assets.bundle = true
-        grails.assets.minifyJs = true
-        grails.assets.minifyCss = true
-        grails.assets.minifyOptions = [
-                strictSemicolons: false,
-                mangleOptions   : [mangle: true, toplevel: false, defines: null, except: null, no_functions: false],
-                genOptions      : [indent_start: 0, indent_level: 4, quote_keys: false, space_colon: false, beautify: false, ascii_only: false, inline_script: false]
-        ]
+    grails.assets.bundle = true
+    grails.assets.minifyJs = true
+    grails.assets.minifyCss = true
+    grails.assets.minifyOptions = [
+            strictSemicolons: false,
+            mangleOptions   : [mangle: true, toplevel: false, defines: null, except: null, no_functions: false],
+            genOptions      : [indent_start: 0, indent_level: 4, quote_keys: false, space_colon: false, beautify: false, ascii_only: false, inline_script: false]
+    ]
+}
+production {
+    grails.logging.jul.usebridge = false
+    grails.serverURL = System.getenv('SERVER_URL')
+    grails.plugin.console.enabled = true
+    grails.dbconsole.enabled = true
+    grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+            "/console/**"         : ['ROLE_ADMIN'],
+            "/plugins/console*/**": ['ROLE_ADMIN']
+    ]
+    facebook {
+        appId = '1560554877527593'
     }
-    production {
-        grails.logging.jul.usebridge = false
-        grails.serverURL = System.getenv('SERVER_URL')
-        grails.plugin.console.enabled = true
-        grails.dbconsole.enabled = true
-        grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-                "/console/**"         : ['ROLE_ADMIN'],
-                "/plugins/console*/**": ['ROLE_ADMIN']
-        ]
-        facebook {
-            appId = '1560554877527593'
+    grails {
+        mail {
+            host = "smtp.gmail.com"
+            port = 465
+            username = "chivas.staging@gmail.com"
+            password = "igdefault"
+            props = ["mail.smtp.auth"                  : "true",
+                     "mail.smtp.socketFactory.port"    : "465",
+                     "mail.smtp.socketFactory.class"   : "javax.net.ssl.SSLSocketFactory",
+                     "mail.smtp.socketFactory.fallback": "false"]
         }
-        grails {
-            mail {
-                host = "smtp.gmail.com"
-                port = 465
-                username = "chivas.staging@gmail.com"
-                password = "igdefault"
-                props = ["mail.smtp.auth"                  : "true",
-                         "mail.smtp.socketFactory.port"    : "465",
-                         "mail.smtp.socketFactory.class"   : "javax.net.ssl.SSLSocketFactory",
-                         "mail.smtp.socketFactory.fallback": "false"]
-            }
-        }
-        google.analytics.tracking.id = 'UA-60729231-1'
-        grails.assets.minifyCss = false
-        grails.assets.minifyJs = false
+    }
+    google.analytics.tracking.id = 'UA-60729231-1'
+    grails.assets.minifyCss = false
+    grails.assets.minifyJs = false
 //        grails.assets.excludes = ["**/*.eot", "**/*.otf", "**/*.svg", "**/*.ttf", "**/*.woff"]
 //        grails.assets.url = "http://d21h87busxkco1.cloudfront.net/assets/"
 //        cors.headers = [
 //                'Access-Control-Allow-Origin': '*',
 //                ]
-    }
 }
 log4j = {
 

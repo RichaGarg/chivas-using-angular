@@ -15,40 +15,29 @@ class UserController {
     }
 
     def submitCode(CouponSubmitCO couponSubmitCO) {
-        println(couponSubmitCO.dump())
         String msg = ''
-        boolean isSharedOnFb = true
+        boolean isSharedOnFb = false
         Map responseMap = [:]
         if (couponSubmitCO.hasErrors()) {
             for (FieldError error : couponSubmitCO.errors.fieldErrors)
-                msg = msg + "<br/>" + g.message(error: error)
-            if (msg.equals("<br/>This unique bottle code is already used. Share on Facebook to increase your chances of winning!")) {
-                isSharedOnFb = false
+                msg = msg + "\n" + g.message(error: error)
+            if (msg.contains("\nThis unique bottle code is already used. Please try another unique code!")) {
+                isSharedOnFb = true
             }
             responseMap = [msg: msg, success: false, shared: isSharedOnFb]
         } else {
             Map data = couponService.couponRegistration(couponSubmitCO)
-//            couponService.sendSms(data.smsMsg, data.registerCouponId)
-            responseMap = [msg: data.msg, success: true, nric: couponSubmitCO.nric, coupon: couponSubmitCO.uniqueCode, registerCouponId: data.registerCouponId]
+            responseMap = [msg: data.msg, success: true, nric: couponSubmitCO.nric, coupon: couponSubmitCO.uniqueCode, registerCouponId: data.registerCouponId, shared: isSharedOnFb]
         }
-        println(responseMap)
         render(responseMap as JSON)
     }
-/*
+
     def fbLogin(FacebookShareCO facebookShareCO) {
-        boolean productionEnv = false
-        if (Environment.current == Environment.PRODUCTION)
-            productionEnv = true
         boolean successShare = couponService.saveFacebookShareInformation(facebookShareCO)
-        render([success: successShare, productionEnv: productionEnv] as JSON)
+        render([success: successShare] as JSON)
     }
 
-    def facebookShare() {
-        println params
-    }*/
-
     def isUniqueCodeValid() {
-        println(params.dump())
         boolean success = false
         String msg
         if(params.ucode) {

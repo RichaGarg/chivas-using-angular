@@ -51,6 +51,8 @@ grails.project.dependency.resolution = {
         runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
+        compile 'org.apache.httpcomponents:httpclient:4.3.1'
+
     }
 
     plugins {
@@ -69,6 +71,8 @@ grails.project.dependency.resolution = {
 
         compile ":console:1.5.3"
         compile ":asynchronous-mail:1.2"
+
+        compile ":rest:0.8"
 
         // Uncomment these to enable additional asset-pipeline capabilities
         //compile ":sass-asset-pipeline:1.9.0"

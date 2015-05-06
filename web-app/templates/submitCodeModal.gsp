@@ -1,4 +1,4 @@
-<div class="modal-body register-popup clearfix popup" ng-controller="SubmitCodeCtrl">
+<div class="modal-body register-popup clearfix popup">
     <button type="button" class="close" id="closeUniqueCodePopUpCross" ng-click="closeUniqueCodePopUp();"><span
             aria-hidden="true"></span></button>
     <span class="text">To register, please provide the following information:</span>
@@ -85,7 +85,7 @@
 
             <li class="clearfix alC">
                 <input type="submit" value="SUBMIT">
-                <span class="spinner" id="submitCodeSpinner" style="display: none">
+                <span class="spinner" id="submitCodeSpinner" ng-show="showDiv.submitSpinner">
                     <img class="loading" src="${asset.assetPath(src: 'spinner.gif')}" alt="Processing.."/>
                 </span>
             </li>

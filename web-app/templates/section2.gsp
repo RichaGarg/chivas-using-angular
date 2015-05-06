@@ -20,7 +20,7 @@
         </div>
 
         <div class="button">
-            <a href="javascript:void(0);" class="common-btn" id="enterUniqueCodeButton" ng-click="openUniqueCodePopUp()">
+            <a href="javascript:void(0);" class="common-btn" id="enterUniqueCodeButton" ng-click="openSubmitUniqueCode()">
                 Enter unique code
             </a>
         </div>
